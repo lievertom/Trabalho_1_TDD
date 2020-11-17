@@ -93,9 +93,11 @@ funcionalidade, sua respectiva branch será fundida (*merge*) na branch __Dev__.
 O trabalho deverá ser realizado em grupos de até três componentes. Os nomes e matrículas dos componentes deverão ser apresentados no arquivo README.md do repositório. A avaliação da participação dos membros no trabalho será realizada pela análise de autoria dos commits.
 Cada grupo deverá enviar email para o professor indicando o nome dos componentes do grupo e o endereço do repositório Github do trabalho.
 
-__Valor do trabalho: 40% da nota final.
-Data de entrega: 25 de novembro de 2020.
-Forma de entrega: via repositório Github.__
+__Valor do trabalho: 40% da nota final.__
+
+__Data de entrega: 25 de novembro de 2020.__
+
+__Forma de entrega: via repositório Github.__
 
 |Matrícula | Estudante |
 | -- | -- |
