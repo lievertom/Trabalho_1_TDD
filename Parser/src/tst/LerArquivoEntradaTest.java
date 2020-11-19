@@ -54,6 +54,7 @@ public class LerArquivoEntradaTest {
 	@Test
 	public void test2LerArquivoEntrada() throws FileNotFoundException {
 		parser.LerArquivoEntrada("ast/totalTime.out");
+		@SuppressWarnings("serial")
 		List<List<Integer>> array = new ArrayList<List<Integer>>() {{
 		    add(Arrays.asList(776, 1102, 1121, 1134, 1161, 1204, 1070, 1140, 1157, 1091));
 			add(Arrays.asList(831, 1205, 1164, 1069, 1287, 1173, 1129, 1200, 1181, 1116));
@@ -78,4 +79,20 @@ public class LerArquivoEntradaTest {
         }};
 		assertEquals(array, parser.getBuffer());
 	}
+	
+	@Test
+	public void test3LerArquivoEntrada() throws FileNotFoundException {
+		parser.LerArquivoEntrada("ast/emptyFile.out");
+		List<List<Integer>> array = new ArrayList<List<Integer>>();
+		assertEquals(array, parser.getBuffer());
+	}
+	
+	@Test(expected=FileNotFoundException.class)
+	public void test4LerArquivoEntrada() throws FileNotFoundException {
+		parser.LerArquivoEntrada("ast/fileNotFounf.out");
+		List<List<Integer>> array = new ArrayList<List<Integer>>();
+		assertEquals(array, parser.getBuffer());
+	}
+	
+
 }
