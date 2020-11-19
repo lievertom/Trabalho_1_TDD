@@ -8,6 +8,7 @@ import java.util.Vector;
 public class Parser {
 
 	private Vector<Vector<Integer>> buffer = new Vector< Vector<Integer>>();
+	private char delimiter = ';';
 	
 	public void LerArquivoEntrada(String path) throws FileNotFoundException {
 		
@@ -34,7 +35,14 @@ public class Parser {
 		
 		return buffer;
 	}
+
+	public void setDelimiter(char delimiter) {
+		this.delimiter = delimiter;
+	}
 	
+	public char getDelimiter() {
+		return delimiter;
+	}
 	
 
 }
