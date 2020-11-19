@@ -20,7 +20,12 @@ public class DefinirDelimitadorDeCampoTest {
 	
 	@Test
 	public void testDefinirDelimitadorDeCampo() throws DelimitadorInvalidoException {
-		parser.setDelimiter(';');
+		parser.setDelimiter(";");
 		assertEquals(';', parser.getDelimiter());
+	}
+	
+	@Test(expected=DelimitadorInvalidoException.class)
+	public void testDelimitadorInvalidoException() throws DelimitadorInvalidoException {
+		parser.setDelimiter("test");
 	}
 }

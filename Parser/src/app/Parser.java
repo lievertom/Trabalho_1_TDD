@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.util.Scanner;
 import java.util.Vector;
 
+import exc.DelimitadorInvalidoException;
+
 public class Parser {
 
 	private Vector<Vector<Integer>> buffer = new Vector< Vector<Integer>>();
@@ -36,8 +38,15 @@ public class Parser {
 		return buffer;
 	}
 
-	public void setDelimiter(char delimiter) {
-		this.delimiter = delimiter;
+	public void setDelimiter(String delimiter) throws DelimitadorInvalidoException {
+		if (delimiter.length() == 1) {
+			this.delimiter = delimiter.charAt(0);
+
+			System.out.println(this.delimiter);
+		}
+		else {
+			throw new DelimitadorInvalidoException(delimiter);
+		}
 	}
 	
 	public char getDelimiter() {
